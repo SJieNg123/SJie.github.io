@@ -22,33 +22,39 @@ main {
     padding: 2em;
 }
 
-.gundam-collection {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.gundam-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 1em;
-    padding: 1em;
-    width: 300px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.carousel-inner {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    transition: transform 0.5s ease;
+    position: relative;
     text-align: center;
 }
 
-.gundam-item img {
-    max-width: 100%;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 1em;
-    margin-bottom: 1em;
+.carousel-item img {
+    width: 100%;
+    height: auto;
 }
 
-h2 {
-    font-size: 1.5em;
-    margin: 0.5em 0;
+.carousel-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 1em;
+    border-radius: 8px;
 }
 
 footer {
